@@ -4,15 +4,20 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -57,7 +62,6 @@ fun InitialScreen() {
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(200.dp)
                     .background(color = Color.Yellow)
             ) {
                 Text(
@@ -73,6 +77,48 @@ fun InitialScreen() {
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFFED1459)
                 )
+                Row() {
+                    Button(
+                        onClick = {},
+                        colors = ButtonDefaults
+                            .buttonColors(
+                                containerColor = Color(0xFFED1459)
+                            ),
+                        border = BorderStroke(
+                            width = 1.dp,
+                            color = Color(0xFFFFC107)
+                        ),
+                        modifier = Modifier
+                            .size(width = 128.dp, height = 48.dp)
+                    ) {
+                        Text(
+                            text = "Login",
+                            color = Color(0xFFFFFFFF),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                    Button(
+                        onClick = {},
+                        colors = ButtonDefaults
+                            .buttonColors(
+                                containerColor = Color(0xFFFFC107)
+                            ),
+                        border = BorderStroke(
+                            width = 1.dp,
+                            color = Color(0xFFED1459)
+                        ),
+                        modifier = Modifier
+                            .size(width = 128.dp, height = 48.dp)
+                    ) {
+                        Text(
+                            text = "Sign up",
+                            color = Color(0xFFED1459),
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold
+                        )
+                    }
+                }
             }
         }
 
