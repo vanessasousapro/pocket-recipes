@@ -10,6 +10,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -47,22 +48,23 @@ fun InitialScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(color = Color.Cyan)
     ) {
         Column(
             modifier = Modifier
                 .padding(16.dp)
-                .fillMaxSize()
-                .background(color = Color.Green)
+                .fillMaxWidth()
+                .align(Alignment.Center),
+            horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
                 painter = painterResource(R.drawable.cooking),
-                contentDescription = "Imagem do Chef"
+                contentDescription = "Imagem do Chef",
+                modifier = Modifier.size(200.dp)
             )
+            Spacer(modifier = Modifier.height(80.dp))
             Column(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .background(color = Color.Yellow)
             ) {
                 Text(
                     text = "UNLIMITED PREMIUM RECIPES",
@@ -75,7 +77,8 @@ fun InitialScreen() {
                     fontSize = 64.sp,
                     lineHeight = 64.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color(0xFFED1459)
+                    color = Color(0xFFED1459),
+                    modifier = Modifier.padding(top = 8.dp, bottom = 16.dp)
                 )
                 Row() {
                     Button(
@@ -98,6 +101,7 @@ fun InitialScreen() {
                             fontWeight = FontWeight.Bold
                         )
                     }
+                    Spacer(modifier = Modifier.width(8.dp))
                     Button(
                         onClick = {},
                         colors = ButtonDefaults
@@ -126,7 +130,7 @@ fun InitialScreen() {
 }
 
 @Composable
-@Preview
+@Preview(showBackground = true, showSystemUi = true)
 fun InitialScreenPreview() {
     PocketRecipesTheme() {
         InitialScreen()
