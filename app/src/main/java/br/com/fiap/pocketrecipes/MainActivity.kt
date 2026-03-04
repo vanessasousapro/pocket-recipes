@@ -30,6 +30,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -89,12 +90,12 @@ fun InitialScreen() {
                     .fillMaxWidth()
             ) {
                 Text(
-                    text = "UNLIMITED PREMIUM RECIPES",
+                    text = stringResource(R.string.unlimited_recipes),
                     color = MaterialTheme.colorScheme.secondary,
                     style = MaterialTheme.typography.titleSmall
                 )
                 Text(
-                    text = "Starting Cooking",
+                    text = stringResource(R.string.app_title),
                     color = MaterialTheme.colorScheme.primary,
                     style = MaterialTheme.typography.displayLarge
                 )
@@ -113,7 +114,7 @@ fun InitialScreen() {
                             .size(width = 128.dp, height = 48.dp)
                     ) {
                         Text(
-                            text = "Login",
+                            text = stringResource(R.string.buttom_login),
                             color = MaterialTheme.colorScheme.onPrimary,
                             style = MaterialTheme.typography.labelMedium
                         )
@@ -133,7 +134,7 @@ fun InitialScreen() {
                             .size(width = 128.dp, height = 48.dp)
                     ) {
                         Text(
-                            text = "Sign up",
+                            text = stringResource(R.string.buttom_signup),
                             color = MaterialTheme.colorScheme.onTertiary,
                             style = MaterialTheme.typography.labelMedium
                         )
