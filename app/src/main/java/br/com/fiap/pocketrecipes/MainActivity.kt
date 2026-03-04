@@ -35,6 +35,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import br.com.fiap.pocketrecipes.ui.theme.PocketRecipesTheme
+import br.com.fiap.pocketrecipes.ui.theme.poppinsFamily
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -89,17 +90,13 @@ fun InitialScreen() {
             ) {
                 Text(
                     text = "UNLIMITED PREMIUM RECIPES",
-                    fontSize = 16.sp,
                     color = MaterialTheme.colorScheme.secondary,
-                    fontWeight = FontWeight.Bold
+                    style = MaterialTheme.typography.titleSmall
                 )
                 Text(
                     text = "Starting Cooking",
-                    fontSize = 64.sp,
-                    lineHeight = 64.sp,
-                    fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.primary,
-                    modifier = Modifier.padding(top = 8.dp, bottom = 16.dp)
+                    style = MaterialTheme.typography.displayLarge
                 )
                 Row() {
                     Button(
@@ -118,8 +115,7 @@ fun InitialScreen() {
                         Text(
                             text = "Login",
                             color = MaterialTheme.colorScheme.onPrimary,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Bold
+                            style = MaterialTheme.typography.labelMedium
                         )
                     }
                     Spacer(modifier = Modifier.width(8.dp))
@@ -139,8 +135,7 @@ fun InitialScreen() {
                         Text(
                             text = "Sign up",
                             color = MaterialTheme.colorScheme.onTertiary,
-                            fontSize = 16.sp,
-                            fontWeight = FontWeight.Bold
+                            style = MaterialTheme.typography.labelMedium
                         )
                     }
                 }
