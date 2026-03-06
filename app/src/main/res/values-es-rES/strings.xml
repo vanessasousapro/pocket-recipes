@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recetas de bolsillo</string>
+    <string name="app_title">empezar a cocinar</string>
+    <string name="unlimited_recipes">RECETAS PREMIUM ILIMITADAS</string>
+    <string name="buttom_login">para entrar</string>
+    <string name="buttom_signup">Registro</string>
+</resources>
