@@ -9,4 +9,12 @@
     <string name="create_a_new_account">Crie uma nova conta</string>
     <string name="user_image">Imagem do usuário</string>
     <string name="camera_icon">Ícone da câmera</string>
+    <string name="your_name">Seu nome</string>
+    <string name="your_e_mail">Seu e-mail</string>
+    <string name="your_password">Sua senha</string>
+    <string name="person_icon">Ícone de pessoa</string>
+    <string name="mail_icon">Ícone de correio</string>
+    <string name="lock_icon">Ícone de cadeado</string>
+    <string name="eye_icon">Ícone de olho</string>
+    <string name="create_account">Criar uma conta</string>
 </resources>
