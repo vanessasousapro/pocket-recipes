@@ -5,4 +5,8 @@
     <string name="unlimited_recipes">RECEITAS PREMIUM ILIMITADAS</string>
     <string name="buttom_login">Entrar</string>
     <string name="buttom_signup">Registrar-se</string>
+    <string name="sign_up">Registrar-se</string>
+    <string name="create_a_new_account">Crie uma nova conta</string>
+    <string name="user_image">Imagem do usuário</string>
+    <string name="camera_icon">Ícone da câmera</string>
 </resources>
