@@ -8,4 +8,12 @@
     <string name="create_a_new_account">Create a new account</string>
     <string name="user_image">User Image</string>
     <string name="camera_icon">Camera Icon</string>
+    <string name="your_name">Your name</string>
+    <string name="your_e_mail">Your e-mail</string>
+    <string name="your_password">Your password</string>
+    <string name="person_icon">Person icon</string>
+    <string name="mail_icon">Mail Icon</string>
+    <string name="lock_icon">Lock Icon</string>
+    <string name="eye_icon">Eye Icon</string>
+    <string name="create_account">Create account</string>
 </resources>
