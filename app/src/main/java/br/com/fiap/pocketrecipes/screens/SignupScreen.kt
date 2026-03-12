@@ -1,13 +1,13 @@
 package br.com.fiap.pocketrecipes.screens
 
 import android.content.res.Configuration
-import android.graphics.drawable.Icon
-import android.media.VolumeShaper
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -25,13 +25,9 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
@@ -41,7 +37,40 @@ import br.com.fiap.pocketrecipes.ui.theme.PocketRecipesTheme
 
 @Composable
 fun SignupScreen(modifier: Modifier = Modifier) {
+    Box(
+        modifier = Modifier
+            .fillMaxSize()
+            .background(MaterialTheme.colorScheme.background)
+    ) {
+        TopEndCard(modifier = Modifier.align(Alignment.TopEnd))
+        BottomStartCard(modifier = Modifier.align(Alignment.BottomStart))
 
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.Center),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            TitleComponent()
+            Spacer(modifier = Modifier.height(48.dp))
+            UserImage()
+            SignupUserForm()
+        }
+    }
+}
+
+@Preview(
+    showBackground = true,
+    showSystemUi = true,
+    uiMode = Configuration.UI_MODE_NIGHT_NO,
+    locale = "en"
+)
+@Composable
+private fun SignupScreenPreview() {
+    PocketRecipesTheme() {
+        SignupScreen()
+    }
 }
 
 @Composable
@@ -63,18 +92,6 @@ fun TitleComponent(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(
-    showBackground = true,
-    uiMode = Configuration.UI_MODE_NIGHT_YES
-
-)
-@Composable
-private fun TitleComponentPreview() {
-    PocketRecipesTheme() {
-        TitleComponent()
-    }
-}
-
 @Composable
 fun UserImage(modifier: Modifier = Modifier) {
     Box(
@@ -85,7 +102,7 @@ fun UserImage(modifier: Modifier = Modifier) {
             painter = painterResource(R.drawable.user),
             contentDescription = stringResource(R.string.user_image),
             modifier = Modifier
-                .size(110.dp)
+                .size(100.dp)
                 .align(alignment = Alignment.Center)
         )
         Icon(
@@ -95,17 +112,6 @@ fun UserImage(modifier: Modifier = Modifier) {
             modifier = Modifier
                 .align(alignment = Alignment.BottomEnd)
         )
-    }
-}
-
-@Preview(
-    showBackground = true,
-    uiMode = Configuration.UI_MODE_NIGHT_YES
-)
-@Composable
-private fun UserImagePreview() {
-    PocketRecipesTheme() {
-        UserImage()
     }
 }
 
@@ -214,15 +220,5 @@ fun SignupUserForm(modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.labelMedium
             )
         }
-    }
-}
-
-@Preview(
-    showBackground = true
-)
-@Composable
-private fun SignupUserFormPreview() {
-    PocketRecipesTheme {
-        SignupUserForm()
     }
 }
