@@ -17,4 +17,11 @@
     <string name="lock_icon">Ícone de cadeado</string>
     <string name="eye_icon">Ícone de olho</string>
     <string name="create_account">Criar uma conta</string>
+    <string name="login">Conecte-se</string>
+    <string name="please_sign_in_to_continue">Por favor, faça login para continuar.</string>
+    <string name="your_e_mail_login">Seu e-mail</string>
+    <string name="your_password_login">Sua senha</string>
+    <string name="sign_in_login">ENTRAR</string>
+    <string name="don_t_have_an_account_login">Não tem uma conta?</string>
+    <string name="sign_up_login">Registrar-se</string>
 </resources>

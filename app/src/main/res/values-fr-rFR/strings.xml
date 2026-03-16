@@ -17,4 +17,11 @@
     <string name="lock_icon">Icône de verrouillage</string>
     <string name="eye_icon">Icône Oeil</string>
     <string name="create_account">Créer un compte</string>
+    <string name="login">Se connecter</string>
+    <string name="please_sign_in_to_continue">Veuillez vous connecter pour continuer</string>
+    <string name="your_e_mail_login">Votre courriel</string>
+    <string name="your_password_login">Votre mot de passe</string>
+    <string name="sign_in_login">SE CONNECTER</string>
+    <string name="don_t_have_an_account_login">Vous navez pas de compte ?</string>
+    <string name="sign_up_login">Registre</string>
 </resources>

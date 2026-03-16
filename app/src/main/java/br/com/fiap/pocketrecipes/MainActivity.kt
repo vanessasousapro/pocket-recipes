@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import br.com.fiap.pocketrecipes.screens.InitialScreen
+import br.com.fiap.pocketrecipes.screens.LoginScreen
 import br.com.fiap.pocketrecipes.screens.SignupScreen
 import br.com.fiap.pocketrecipes.ui.theme.PocketRecipesTheme
 
@@ -15,7 +16,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             PocketRecipesTheme {
                 //InitialScreen()
-                SignupScreen()
+                //SignupScreen()
+                LoginScreen()
             }
         }
     }
