@@ -16,4 +16,11 @@
     <string name="lock_icon">Lock Icon</string>
     <string name="eye_icon">Eye Icon</string>
     <string name="create_account">Create account</string>
+    <string name="login">Login</string>
+    <string name="please_sign_in_to_continue">Please, sign in to continue</string>
+    <string name="your_e_mail_login">Your e-mail</string>
+    <string name="your_password_login">Your password</string>
+    <string name="sign_in_login">SIGN IN</string>
+    <string name="don_t_have_an_account_login">Dont have an account?</string>
+    <string name="sign_up_login">Sign up</string>
 </resources>
