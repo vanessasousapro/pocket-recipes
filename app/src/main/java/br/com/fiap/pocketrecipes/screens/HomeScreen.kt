@@ -12,12 +12,14 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -47,7 +49,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
         Scaffold(
             topBar = {MyTopAppBar()},
             bottomBar = {MyBottomAppBar()},
-            floatingActionButton = {},
+            floatingActionButton = {MyFloatingActionButton()},
         ){ paddingValues ->
             Column(
                 modifier = Modifier
@@ -72,8 +74,7 @@ private fun HomeScreenPreview() {
 fun MyTopAppBar(modifier: Modifier = Modifier) {
     TopAppBar(
         modifier = Modifier
-            .fillMaxWidth()
-            .height(60.dp),
+            .fillMaxWidth(),
         title = {
             Row(
                 modifier = Modifier
@@ -168,8 +169,22 @@ fun MyBottomAppBar(modifier: Modifier = Modifier) {
 
 @Preview
 @Composable
-private fun MyBottomAppBarPreview() {
+private fun MyFloatingActionButtonPreview() {
     PocketRecipesTheme() {
-        MyBottomAppBar()
+        MyFloatingActionButton()
+    }
+}
+
+@Composable
+fun MyFloatingActionButton(modifier: Modifier = Modifier) {
+    FloatingActionButton(
+        onClick = {},
+        shape = CircleShape,
+        containerColor = MaterialTheme.colorScheme.primary
+    ) {
+        Icon(
+            imageVector = Icons.Default.Add,
+            contentDescription = "Add Buttom"
+        )
     }
 }
