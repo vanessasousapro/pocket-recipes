@@ -23,4 +23,7 @@
     <string name="sign_in_login">SIGN IN</string>
     <string name="don_t_have_an_account_login">Dont have an account?</string>
     <string name="sign_up_login">Sign up</string>
+    <string name="search_by_recipes">Search by recipes</string>
+    <string name="categories">Categories</string>
+    <string name="newly_added_reci_es">Newly added reciṕes</string>
 </resources>
