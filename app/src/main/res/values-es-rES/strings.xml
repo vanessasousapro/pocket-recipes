@@ -24,4 +24,7 @@
     <string name="sign_in_login">INICIAR SESIÓN</string>
     <string name="don_t_have_an_account_login">¿No tienes una cuenta?</string>
     <string name="sign_up_login">Registro</string>
+    <string name="search_by_recipes">Buscar por recetas</string>
+    <string name="categories">Categories</string>
+    <string name="newly_added_reci_es">Recién agregados</string>
 </resources>
