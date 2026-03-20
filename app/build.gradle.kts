@@ -55,5 +55,8 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+    //Icon Pack Dependency
     implementation("androidx.compose.material:material-icons-extended-android:1.7.8")
+    //Navigation Compose Dependency
+    implementation(libs.androidx.navigation.compose)
 }
