@@ -17,16 +17,16 @@ fun NavigationRoutes() {
         startDestination = Destination.InitialScreen.route
     ){
         composable(Destination.InitialScreen.route){
-            InitialScreen()
+            InitialScreen(navController)
         }
         composable(Destination.HomeScreen.route) {
-            HomeScreen()
+            HomeScreen(navController)
         }
         composable(Destination.SignupScreen.route) {
-            SignupScreen()
+            SignupScreen(navController)
         }
         composable(Destination.LoginScreen.route) {
-            LoginScreen()
+            LoginScreen(navController)
         }
     }
 }

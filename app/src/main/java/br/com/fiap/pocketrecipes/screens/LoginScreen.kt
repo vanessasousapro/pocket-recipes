@@ -32,11 +32,15 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import br.com.fiap.pocketrecipes.R
+import br.com.fiap.pocketrecipes.navigation.Destination
 import br.com.fiap.pocketrecipes.ui.theme.PocketRecipesTheme
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier) {
+fun LoginScreen(navController: NavHostController) {
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -65,7 +69,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             Spacer(modifier = Modifier
                 .height(64.dp)
             )
-            LoginForm()
+            LoginForm(navController)
         }
     }
 }
@@ -74,7 +78,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
 @Composable
 private fun LoginScreenPreview() {
     PocketRecipesTheme() {
-        LoginScreen()
+        LoginScreen(rememberNavController())
     }
 }
 
@@ -108,7 +112,7 @@ private fun LoginTitlePreview() {
 }*/
 
 @Composable
-fun LoginForm(modifier: Modifier = Modifier) {
+fun LoginForm(navController: NavController) {
     Column() {
         OutlinedTextField(
             value = "",
@@ -182,7 +186,10 @@ fun LoginForm(modifier: Modifier = Modifier) {
                 .height(32.dp)
         )
         Button(
-            onClick = {},
+            onClick = {
+                navController
+                    .navigate(Destination.HomeScreen.route)
+            },
             modifier = Modifier
                 .fillMaxWidth()
                 .height(48.dp),
@@ -208,7 +215,10 @@ fun LoginForm(modifier: Modifier = Modifier) {
                 color = MaterialTheme.colorScheme.primary
             )
             TextButton(
-                onClick = {}
+                onClick = {
+                    navController
+                        .navigate(Destination.SignupScreen.route)
+                }
             ) {
                 Text(
                     text = stringResource(R.string.sign_up_login),
@@ -220,10 +230,10 @@ fun LoginForm(modifier: Modifier = Modifier) {
     }
 }
 
-/*@Preview(showBackground = true)
+@Preview(showBackground = true)
 @Composable
 private fun LoginFormPreview() {
     PocketRecipesTheme() {
-        LoginForm()
+        LoginForm(rememberNavController())
     }
-}*/
+}
