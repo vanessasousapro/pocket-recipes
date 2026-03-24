@@ -47,11 +47,13 @@ import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import br.com.fiap.pocketrecipes.R
 import br.com.fiap.pocketrecipes.ui.theme.PocketRecipesTheme
 
 @Composable
-fun HomeScreen(modifier: Modifier = Modifier) {
+fun HomeScreen(navController: NavController) {
     Surface(
         modifier = Modifier
             .fillMaxSize()
@@ -70,7 +72,7 @@ fun HomeScreen(modifier: Modifier = Modifier) {
 @Composable
 private fun HomeScreenPreview() {
     PocketRecipesTheme() {
-        HomeScreen()
+        HomeScreen(rememberNavController())
     }
 }
 
